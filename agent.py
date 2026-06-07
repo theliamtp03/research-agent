@@ -109,7 +109,7 @@ def run_research_agent(topic: dict) -> str:
     # Step 1: Generate targeted search queries
     print("  → Planning searches...")
     plan_response = client.messages.create(
-        model="claude-opus-4-5",
+        model="claude-opus-4-6",
         max_tokens=800,
         system="You are a research planning assistant. Generate precise web search queries to thoroughly research a topic. Return ONLY a JSON array of 6-8 search query strings, nothing else.",
         messages=[{
@@ -162,7 +162,7 @@ def run_research_agent(topic: dict) -> str:
     today = datetime.now().strftime("%B %d, %Y")
     
     report_response = client.messages.create(
-        model="claude-opus-4-5",
+        model="claude-opus-4-6",
         max_tokens=4000,
         system=f"""You are writing a deep dive research report for Liam, a 22-year-old aerospace engineering graduate from Newcastle, UK. He is ambitious, intellectually curious, and working toward a career in high finance in Hong Kong/Singapore before building a conglomerate. He runs ultra trails competitively and has wide-ranging interests in technology, business, health, and science.
 
